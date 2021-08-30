@@ -10,11 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - run: apt-get install -y carton
+    - run: sudo apt-get install -y carton
     - run: carton install
     - run: ./maint/fatpack.sh
     - uses: ncipollo/release-action@v1
       with:
-        artifacts: "release.tar.gz,foo/*.txt"
-        bodyFile: "body.md"
+        artifacts: "igor.pl"
         token: ${{ secrets.GITHUB_TOKEN }}
