@@ -15,5 +15,5 @@ jobs:
     - run: ./maint/fatpack.sh
     - uses: ncipollo/release-action@v1
       with:
-        artifacts: "scripts/igor.pl"
+        artifacts: "igor.packed.pl"
         token: ${{ secrets.GITHUB_TOKEN }}
